@@ -12,5 +12,5 @@ export default defineConfig({
     }),
     tailwindcss(),
   ],
-  base: process.env.VITE_BASE_URL || "/react-vite-deploy",
+  base: "/marcgarreta-portfolio",
 });
