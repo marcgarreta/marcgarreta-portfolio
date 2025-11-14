@@ -1,0 +1,434 @@
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #0f172a;
+  color: #cbd5e1;
+}
+
+.app-container {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #0f172a;
+}
+
+/* Mida de los iconos (Github, LinkedIn, Email) */
+.social-icon {
+  color: #94a3b8;
+  font-size: 27px;  
+  transition: all 0.3s ease; 
+}
+
+.social-icon:hover {
+  color: #f8fafc; 
+  /*transform: scale(1.2); se hace más grande al pasar el mouse */
+}
+
+.sidebar {
+  width: 40%;
+  max-width: 600px;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  padding: 4rem 3rem 6rem 12rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 4rem;
+  background-color: transparent;
+  z-index: 20;
+}
+
+.sidebar h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #f8fafc;
+  margin-bottom: 0.5rem;
+}
+
+.sidebar h2 {
+  font-size: 1.5rem;
+  color: #94a3b8;
+  margin-bottom: 1rem;
+}
+
+.sidebar p {
+  max-width: 320px;
+  font-size: 1rem;
+  color: #94a3b8;
+  line-height: 1.6;
+}
+
+.sidebar nav {
+  margin-top: 6rem; 
+}
+
+.sidebar nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.sidebar nav li {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.sidebar nav a {
+  position: relative;
+  text-decoration: none;
+  color: #64748b;
+  font-size: 0.95rem;
+  letter-spacing: 1px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Línea izquierda */
+.sidebar nav a::before {
+  content: "";
+  display: block;
+  width: 32px;
+  height: 1px;
+  background-color: #475569;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+/* Hover */
+.sidebar nav a:hover {
+  color: #f8fafc;
+}
+
+.sidebar nav a:hover::before {
+  width: 64px;
+  background-color: #f8fafc;
+}
+
+.sidebar nav a.active {
+  color: #f8fafc;
+  font-weight: 600;
+}
+
+.sidebar nav a.active::before {
+  background-color: #f8fafc;
+  width: 64px;
+}
+
+.sidebar-bottom {
+  display: flex;
+  gap: 2rem;        /* espacio entre iconos */
+  margin-top: auto;  /* empuja hacia abajo */
+  margin-bottom: 11rem; 
+}
+
+.content {
+  margin-left: 45%;
+  width: 50%;
+  padding: 6rem 6rem 6rem 8rem;
+  height: 100vh;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  background-color: transparent;
+  position: relative;
+  z-index: 20;
+}
+
+.content section {
+  min-height: 85vh;
+  padding-top: 0rem;       /* reduced from 4rem */
+}
+
+.content h2 {
+  color: #f8fafc;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.content p {
+  color: #94a3b8;
+  line-height: 1.8;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.content a {
+  color: #f8fafc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  border-bottom: none;
+}
+
+.content a:hover {
+  color: #60a5fa;
+}
+
+.mouse-light-wrapper {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-color: transparent;
+  z-index: 10;
+}
+
+.mouse-light {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(
+    circle 800px at var(--x, 50%) var(--y, 50%),
+    rgba(96, 165, 250, 0.15),
+    transparent 80%
+  );
+  mix-blend-mode: screen;
+  transition: background 0.15s ease-out;
+  will-change: background;
+}
+
+
+.experience-section {
+  padding: 4rem 0;
+}
+
+.experience-list {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.experience-item {
+  display: flex;
+  gap: 1.2rem;
+  align-items: flex-start;
+}
+
+.experience-date {
+  flex: 0 0 150px; /* ancho fijo para la fecha */
+  font-weight: 400;
+  color: #94a3b8;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center; 
+  padding-top: 1.4rem;
+}
+
+.experience-details {
+  flex: 1;
+}
+
+.experience-position {
+  font-size: 1.25rem;
+  font-weight: 300;
+  color: #f8fafc;
+  margin-bottom: 0.5rem;
+}
+
+.experience-description {
+  color: #cbd5e1;
+  margin-bottom: 0.75rem;
+}
+
+.experience-skills {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.skill-badge {
+  background-color: #0897df70;
+  color: #94a3b8;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 0.85rem;
+}
+
+.resume-button-wrapper {
+  margin-top: 2rem;       /* más separación del contenido previo */
+  display: flex;
+  justify-content: flex-start; /* alinea el botón a la izquierda, puedes cambiar a center */
+}
+
+.projects-section {
+  padding: 4rem 0;
+}
+
+.projects-list {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.project-item {
+  display: flex;
+  gap: 1rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  align-items: flex-start;
+  border-radius: 0.5rem;
+  position: relative;
+}
+
+.project-item:hover {
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.15); /* rectángulo visible */
+  background-color: rgba(11, 47, 208, 0.02);
+}
+
+.project-image {
+  flex: 0 0 180px;      
+  height: 120px;        
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.project-image img {
+  width: 80%;
+  height: auto;
+  object-fit: contain;
+}
+
+.project-details {
+  flex: 1;
+  padding: 1rem;        /* add padding so skills don’t touch the bottom */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* ensures content stacks from top */
+}
+
+.project-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #f8fafc;
+  margin-bottom: 0.5rem;
+}
+
+.project-description {
+  color: #cbd5e1;
+  line-height: 1.6;
+  margin-bottom: 0.75rem;
+}
+
+.project-skills {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.certificate-skills {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.skill-badge {
+  background-color: #1e293b;
+  color: #94a3b8;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 0.85rem;
+  text-align: center;       /* centers text inside badge */
+
+}
+
+.ending-section {
+  height: 100vh;
+  display: flex;
+  align-items: flex-end;      /* text sits low, aligned with sidebar icons */
+  justify-content: flex-start; /* left-aligned text */
+  text-align: left;
+  color: #94a3b8;
+  font-size: 0.9rem;
+  line-height: 1.8;
+  padding-bottom: 11rem;      /* matches sidebar icon offset */
+  padding-left: 8rem;         /* consistent with your .content padding */
+  padding-right: 6rem;
+  min-height: 10vh;
+}
+
+/* Match link style with About.jsx */
+.ending-section a {
+  color: #f8fafc;
+  text-decoration: none;
+  font-size: 0.9rem; 
+  transition: color 0.3s ease;
+}
+
+.ending-section a:hover {
+  color: #60a5fa;
+}
+
+#certifications {
+  padding: 0.25rem 0;
+  min-height: 10vh;   
+}
+
+.resume-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+  color: #f8fafc;           /* default text color */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+/* Diagonal arrow default size/color */
+.resume-button .resume-arrow {
+  color: #f8fafc;           /* same as text */
+  transition: color 0.3s ease;
+}
+
+/* Hover effect: both text and arrow turn blue */
+.resume-button:hover {
+  color: #60a5fa;           /* text turns blue */
+}
+
+.resume-button:hover .resume-arrow {
+  color: #60a5fa;           /* arrow turns blue too */
+}
+
+/* Back button for ProjectsArchive page */
+.back-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+  color: #f8fafc;           /* default text color */
+  text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 0.4rem 0.6rem;
+  border-radius: 0.25rem;
+  transition: color 0.3s ease, background-color 0.2s ease;
+}
+
+.back-button .resume-arrow {
+  color: inherit;           /* inherit text color */
+  transform: rotate(0deg);  /* left arrow stays horizontal */
+  transition: color 0.3s ease;
+}
+
+/* Hover effect: text and arrow turn blue */
+.back-button:hover {
+  color: #60a5fa;
+  background-color: rgba(96, 165, 250, 0.1); /* subtle hover background */
+}
+
+.back-button:hover .resume-arrow {
+  color: inherit;
+}
+
+.projects-archive-row td {
+  padding: 12rem 0.5rem;   
+}
