@@ -1,6 +1,5 @@
 # Personal Portfolio Website 
 
-![GitHub license](https://img.shields.io/github/license/marcgarreta/marcgarreta-portfolio)
 ![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
 ![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black)
 ![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
