@@ -46,7 +46,7 @@ const Sidebar = () => {
       <div className="sidebar-top">
         <h1>Marc Garreta</h1>
         <h2>AI Engineer</h2>
-        <p>I create AI solutions that ensure efficiency, interpretability, and reliability.</p>
+        <p>I'm exploring data-driven solutions to be efficient and easy to understand, while learning something new every day.</p>
 
         <nav>
           <ul>

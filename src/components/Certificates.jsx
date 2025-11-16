@@ -3,17 +3,23 @@ import { FiArrowUpRight } from "react-icons/fi";
 const certificates = [
   {
     year: "2025",
-    title: "Deep Learning Specialization",
-    issuer: "DeepLearning.AI",
-    skills: ["Neural Networks", "CNNs", "RNNs"],
-    link: "https://coursera.org/some-certificate-link"
+    title: "Introduction to the Principles and Practice of Clinical Research",
+    issuer: "The National Institutes of Health (NIH)",
+    skills: ["Clinical Research", "Research Ethics", "Data Analysis", "Biostatistics"],
+  },
+  {
+    year: "2025",
+    title: "Introduction to Deep Learning & Neural Networks with Keras",
+    issuer: "IBM",
+    skills: ["Python", "Keras", "Neural Networks"],
+    link: "https://www.coursera.org/account/accomplishments/verify/QJR1HJR2XK4Q"
   },
   {
     year: "2024",
-    title: "Machine Learning with Python",
-    issuer: "IBM Skills Network",
-    skills: ["Python", "Scikit-Learn", "Modeling"],
-    link: "https://coursera.org/some-certificate-link"
+    title: "Deep Neural Networks with PyTorch",
+    issuer: "IBM",
+    skills: ["Python", "PyTorch", "Scikit-Learn"],
+    link: "https://www.coursera.org/account/accomplishments/verify/4J4LK5XSKLL4"
   },
 ];
 

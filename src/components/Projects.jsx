@@ -1,18 +1,20 @@
 import { FiArrowUpRight } from "react-icons/fi";
 import { Link } from "react-router-dom";
+import ECG from "@/assets/images/ECG_project.png";
+import WEBSITE from "@/assets/images/WEBSITE_project.png";
 
 const projects = [
   {
     title: "Unsupervised detection of anomalies in 12-lead electrocardiograms (ECGs)",
     description: "Developed a deep learning framework to detect anomalies in 12-lead ECGs, complemented by a user interface to enhance interpretability.",
-    image: "src/assets/images/ECG_project.png",
+    image: ECG,
     skills: ["Python", "PyTorch", "Streamlit", "LaTeX"],
     link: "https://arxiv.org/abs/2510.05919"
   },
   {
     title: "Personal Website",
-    description: "Developed a deep learning framework to detect anomalies in 12-lead ECGs, complemented by a user interface to enhance interpretability.",
-    image: "src/assets/images/WEBSITE_project.png",
+    description: "Built and deployed a personal portfolio website using React and Vite on Vercel to showcase my projects and skills as a complement to my academic portfolio.",
+    image: WEBSITE,
     skills: ["React", "Vite", "Vercel"],
     link: "https://github.com/marcgarreta/PersonalWebsite"
   },

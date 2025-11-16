@@ -1,6 +1,5 @@
 {
   "name": "web",
-  "homepage": "https://marcgarreta.github.io/marcgarreta-portfolio/",
   "private": true,
   "version": "0.0.0",
   "type": "module",

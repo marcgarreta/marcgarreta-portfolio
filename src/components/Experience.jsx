@@ -1,4 +1,5 @@
 import { FiArrowUpRight } from "react-icons/fi";
+import CV from "@/assets/images/cv_marcgarreta_eng.pdf";
 
 const experiences = [
   {
@@ -31,7 +32,7 @@ const Experience = () => {
       </div>
       <div className="resume-button-wrapper" style={{ marginTop: "2rem" }}>
         <a
-          href="src/assets/images/cv_marcgarreta_eng.pdf"
+          href={CV}
           target="_blank"
           rel="noopener noreferrer"
           className="resume-button"
