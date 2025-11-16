@@ -8,6 +8,8 @@ This project is the creation of my **personal portfolio website**, available at:
 
 Built with **React + Vite** and deployed on **Vercel**, this website serves both as my personal site and as a learning challenge to explore new technologies and improve my skills.
 
+The website allows users to clearly see sections such as **About Me**, **Experience**, **Projects**, and **Certifications**. It is currently designed for **desktop screens** and is **not yet mobile-friendly**, though mobile support is planned for a future implementation.
+
 ---
 
 ![Website Screenshot](images/website_example.png)
@@ -39,13 +41,13 @@ npm run dev
 1. Fork or clone the repository
 git clone https://github.com/marcgarreta/marcgarreta-portfolio
 
-2. Go to Vercel **[https://vercel.com](https://vercel.com)**
+2. Go to Vercel https://vercel.com
 
 3. Click New Project -> Import Repository
 
 4 Select your fork or the cloned repository
 
-5. Ensure the Framework Preset is **Vite**
+5. Ensure the Framework Preset is Vite
 
 6. Click Deploy
 ```
