@@ -7,12 +7,15 @@ import Certifications from "./components/Certificates";
 import Ending from "./components/Ending";
 import MouseEffect from "./assets/MouseEffect";
 import ProjectsArchive from "./components/ProjectsArchive"; 
+import { Analytics } from '@vercel/analytics/next';
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./index.css";
 
 function App() {
   return (
     <Router>
       <MouseEffect /> {/* MouseEffect for the hover effect */}
+
       <Routes>
         {/* Home page */}
         <Route
@@ -30,12 +33,17 @@ function App() {
             </div>
           }
         />
+
         {/* Direct access to projects archive */}
         <Route
           path="/projects-archive"
           element={<ProjectsArchive />}
         />
       </Routes>
+
+      {/* Vercel Analytics */}
+      <Analytics />
+      <SpeedInsights />
     </Router>
   );
 }
