@@ -16,7 +16,7 @@ const projects = [
     description: "Built and deployed a personal portfolio website using React and Vite on Vercel to showcase my projects and skills as a complement to my academic portfolio.",
     image: WEBSITE,
     skills: ["React", "Vite", "Vercel"],
-    link: "https://github.com/marcgarreta/PersonalWebsite"
+    link: "https://github.com/marcgarreta/marcgarreta-portfolio"
   },
 ];
 
