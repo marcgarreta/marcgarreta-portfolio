@@ -7,8 +7,8 @@ import Certifications from "./components/Certificates";
 import Ending from "./components/Ending";
 import MouseEffect from "./assets/MouseEffect";
 import ProjectsArchive from "./components/ProjectsArchive"; 
-import { Analytics } from '@vercel/analytics/next';
-import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from "@vercel/speed-insights/react";
 import "./index.css";
 
 function App() {
